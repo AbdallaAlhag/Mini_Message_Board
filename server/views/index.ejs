@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <!-- <h1>Index Page</h1> -->
+    <!-- <div class="message content">
+        <h2>Index Page</h2>
+    
+        <% if (messages.length > 0) { %>
+          <% messages.forEach(message => { %>
+    
+            <p class="message"><%= message.text %></p>
+            <h3 class="user"><%= message.user %></h3>
+            <p class="user"><%= message.added %></p>
+    
+          <% }) %>
+        <% } else { %>
+          <p>There are no messages to display...</p>
+        <% } %> -->
+        <h1>Messages</h1>
+        <ul>
+          <% messages.forEach((message) => { %>
+            <li><strong><%= message.user %></strong>: <%= message.text %> <small>(<%= message.added.toLocaleString() %>)</small></li>
+          <% }) %>
+        </ul>
+        <a href="/new">Add a new message</a>
+      
+      </div>
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

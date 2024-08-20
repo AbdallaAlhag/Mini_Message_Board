@@ -1,0 +1,21 @@
+<!-- views/new.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+
+  <body>
+    <h1>Add a New Message</h1>
+    <form action="/new" method="POST">
+      <div>
+        <label for="user">User:</label>
+        <input type="text" id="user" name="user" required />
+      </div>
+      <div>
+        <label for="text">Message:</label>
+        <input type="text" id="text" name="text" required />
+      </div>
+      <button type="submit">Add Message</button>
+    </form>
+    <a href="/">Go back</a>
+  </body>
+</html>
