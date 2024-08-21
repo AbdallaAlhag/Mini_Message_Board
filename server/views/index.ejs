@@ -8,16 +8,23 @@
         <h1>Messages</h1>
         <a href="/new" class="btn">Add a new message</a>
       </div>
-      <ul>
-        <% messages.forEach((message) => { %>
-        <div class="messageContainer">
+      <div class="messageContainer">
+        <ul>
+          <% messages.forEach((message, index) => { %>
           <li>
-            <strong><%= message.user %></strong>: <%= message.text %>
-            <small>(<%= moment(message.added).fromNow() %>)</small>
+            <div class="message-content">
+              <div>
+                <strong><%= message.user %>:</strong> <%= message.text %>
+              </div>
+              <div>
+                <small>(<%= moment(message.added).fromNow() %>)</small>
+                <a href="/details/<%= index %>" class="btn">Open</a>
+              </div>
+            </div>
           </li>
-        </div>
-        <% }) %>
-      </ul>
+          <% }) %>
+        </ul>
+      </div>
     </div>
 
     <%- include("./partials/footer.ejs") %>

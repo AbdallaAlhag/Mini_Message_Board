@@ -34,8 +34,20 @@ function addNewMessage(req, res) {
     res.redirect('/');
 }
 
+const blog_details = (req, res) => {
+    const id = req.params.id;
+    const result = messages[id]
+    if (result) {
+        res.render('details', { message: result, title: 'Message Details' , moment});
+    } else {
+        res.status(404).send('Message not found'); // Handle the case where the ID is invalid
+    }
+
+}
+
 export default {
     getMessages,
     newMessageForm,
-    addNewMessage
+    addNewMessage,
+    blog_details
 };

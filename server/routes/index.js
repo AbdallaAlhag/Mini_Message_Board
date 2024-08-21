@@ -12,4 +12,7 @@ router.get('/new', messageController.newMessageForm);
 // POST new message
 router.post('/new', messageController.addNewMessage);
 
+// GET blog details
+router.get('/details/:id', messageController.blog_details);
+
 export default router;

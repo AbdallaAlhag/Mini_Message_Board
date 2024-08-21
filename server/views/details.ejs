@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/header.ejs") %>
+    <div class="container">
+      <div class="button-helper">
+        <h1>Message Detail</h1>
+        <a href="/" class="btn">Back</a>
+      </div>
+      <div class="messageContainer">
+        <ul>
+            <li>
+                <strong><%= message.user %></strong>: <%= message.text %>
+                <small>(<%= moment(message.added).fromNow() %>)</small>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <%- include("./partials/footer.ejs") %>
+  </body>
+</html>

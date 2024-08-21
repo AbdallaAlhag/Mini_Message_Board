@@ -74,7 +74,10 @@ select:focus {
 }
 
 ul {
-  list-style-type: none; /* This will remove bullet points */
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Adds space between each list item */
 }
 
 label {
@@ -98,9 +101,9 @@ footer p {
 }
 
 header {
-  border-bottom: 1px solid black;
   padding: 10px;
   background: #f8f9fa;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
@@ -121,16 +124,17 @@ header h1 {
 .container h1 {
   padding-top: 25px;
 }
+
 .messageContainer {
   padding: 10px;
-  background: #f8f9fa;
   margin-bottom: 10px;
+  padding-left: 0px;
 }
 
 .messageContainer li {
   width: 100%;
   padding: 30px;
-  padding-left: 10px;
+  background: #f8f9fa;
 }
 
 .button-helper {
@@ -139,6 +143,14 @@ header h1 {
   justify-content: space-between;
 }
 
-.button-helper a:hover {
+.button-helper a:hover,
+.message-content a:hover {
   text-decoration: none;
+}
+
+.message-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
