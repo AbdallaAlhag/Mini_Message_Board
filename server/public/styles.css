@@ -16,68 +16,115 @@ body {
 
 /* Typography */
 body {
-    font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #fff;
-    padding: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 20px;
-    font-weight: bold;
-    line-height: 1.2;
-}
-
-p {
-    margin-bottom: 15px;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+  height: 100%;
 }
 
 a {
-    color: #007BFF;
-    text-decoration: none;
+  color: #4682b4;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 
 /* Buttons */
-button, .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007BFF;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
+button,
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
 }
 
-button:hover, .btn:hover {
-    background-color: #0056b3;
+button:hover,
+.btn:hover {
+  background-color: #0056b3;
 }
 
 /* Forms */
-input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
 
-input:focus, textarea:focus, select:focus {
-    border-color: #007BFF;
-    outline: none;
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #1e90ff;
+  outline: none;
+}
+
+ul {
+  list-style-type: none; /* This will remove bullet points */
 }
 
 label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: block;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%; /* Adjust the width to fit the container */
+  background-color: #f8f9fa;
+  color: black;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+footer p {
+  margin-left: 10%;
+}
+
+header {
+  border-bottom: 1px solid black;
+  padding: 10px;
+  background: #f8f9fa;
+}
+
+header h1 {
+  margin-left: 9.5%;
+  margin-bottom: 0px !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10%;
+  margin-right: 10%;
+  gap: 25px;
+  text-align: left;
+}
+
+.container h1 {
+  padding-top: 25px;
+}
+.messageContainer {
+  padding: 10px;
+  background: #f8f9fa;
+  margin-bottom: 10px;
+}
+
+.messageContainer li {
+  width: 100%;
+  padding: 30px;
 }
