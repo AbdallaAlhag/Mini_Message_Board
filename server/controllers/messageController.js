@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 const messages = [
     {
         text: "Hi there!",
@@ -13,7 +15,11 @@ const messages = [
 
 // Controller to handle getting the messages and rendering the home page
 function getMessages(req, res) {
-    res.render('index', { title: 'Mini Message Board', messages: messages });
+    res.render('index', {
+        title: 'Mini Message Board',
+        messages: messages.reverse(),
+        moment: moment // Pass moment to the view
+    });
 }
 
 // Controller to handle rendering the form for a new message

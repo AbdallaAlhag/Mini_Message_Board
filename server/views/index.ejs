@@ -4,18 +4,20 @@
   <body>
     <%- include("./partials/header.ejs") %>
     <div class="container">
-      <h1>Messages</h1>
+      <div class="button-helper">
+        <h1>Messages</h1>
+        <a href="/new" class="btn">Add a new message</a>
+      </div>
       <ul>
         <% messages.forEach((message) => { %>
         <div class="messageContainer">
           <li>
             <strong><%= message.user %></strong>: <%= message.text %>
-            <small>(<%= message.added.toLocaleString() %>)</small>
+            <small>(<%= moment(message.added).fromNow() %>)</small>
           </li>
         </div>
         <% }) %>
       </ul>
-      <a href="/new">Add a new message</a>
     </div>
 
     <%- include("./partials/footer.ejs") %>

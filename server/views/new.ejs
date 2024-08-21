@@ -7,7 +7,10 @@
     <%- include("./partials/header.ejs") %>
 
     <div class="container">
-      <h1>Add a New Message</h1>
+      <div class="button-helper">
+        <h1>Add a New Message</h1>
+        <a href="/" class="btn">Go back</a>
+      </div>
       <form action="/new" method="POST">
         <div>
           <label for="user">User:</label>
@@ -19,7 +22,6 @@
         </div>
         <button type="submit">Add Message</button>
       </form>
-      <a href="/">Go back</a>
     </div>
   </body>
 </html>

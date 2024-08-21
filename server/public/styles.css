@@ -12,6 +12,8 @@ body {
   background-color: #f7f7f7;
   color: #333;
   line-height: 1.6;
+  max-height: 95vh;
+  overflow-y: auto;
 }
 
 /* Typography */
@@ -107,6 +109,7 @@ header h1 {
 }
 
 .container {
+  max-height: 85vh;
   display: flex;
   flex-direction: column;
   margin-left: 10%;
@@ -127,4 +130,15 @@ header h1 {
 .messageContainer li {
   width: 100%;
   padding: 30px;
+  padding-left: 10px;
+}
+
+.button-helper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button-helper a:hover {
+  text-decoration: none;
 }
