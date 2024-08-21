@@ -6,7 +6,7 @@
     <div class="container">
       <div class="button-helper">
         <h1>Messages</h1>
-        <a href="/new" class="btn">Add a new message</a>
+        <a href="/new" class="btn nav-btn">Add a new message</a>
       </div>
       <div class="messageContainer">
         <ul>
@@ -17,7 +17,7 @@
                 <strong><%= message.user %>:</strong> <%= message.text %>
               </div>
               <div>
-                <small>(<%= moment(message.added).fromNow() %>)</small>
+                <small>About <%= moment(message.added).fromNow() %></small>
                 <a href="/details/<%= index %>" class="btn">Open</a>
               </div>
             </div>

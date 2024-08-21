@@ -8,7 +8,7 @@
 html,
 body {
   height: 100%;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f7f7f7;
   color: #333;
   line-height: 1.6;
@@ -18,13 +18,14 @@ body {
 
 /* Typography */
 body {
-  font-family: "Open Sans", Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #333;
   background-color: #fff;
   height: 100%;
 }
+
 
 a {
   color: #4682b4;
@@ -126,15 +127,15 @@ header h1 {
 }
 
 .messageContainer {
-  padding: 10px;
+  padding: 10px 0px;
   margin-bottom: 10px;
-  padding-left: 0px;
 }
 
 .messageContainer li {
   width: 100%;
   padding: 30px;
   background: #f8f9fa;
+  box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .button-helper {
@@ -148,9 +149,17 @@ header h1 {
   text-decoration: none;
 }
 
-.message-content{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.message-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn.nav-btn {
+  background-color: #28a745;
+}
+
+.btn.nav-btn:hover {
+  background-color: #218838;
 }
