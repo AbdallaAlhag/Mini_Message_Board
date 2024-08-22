@@ -10,11 +10,11 @@
       </div>
       <div class="messageContainer">
         <ul>
-          <% messages.forEach((message, index) => { %>
+          <% messages.slice().reverse().forEach((message, index) => { %>
           <li>
             <div class="message-content">
               <div>
-                <strong><%= message.user %>:</strong> <%= message.text %>
+                <strong><%= message.username %>:</strong> <%= message.text %>
               </div>
               <div>
                 <small>About <%= moment(message.added).fromNow() %></small>

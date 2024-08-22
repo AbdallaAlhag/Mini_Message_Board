@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import router from './routes/index.js';
-
+import { body, validationResult } from 'express-validator'; 
 dotenv.config();
 
 const app = express();

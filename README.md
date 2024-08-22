@@ -13,5 +13,6 @@ Mini Message Board is a simple web application that allows users to leave messag
 
 ## Tech Stack
 
-**Server:** Node, Express, ejs, CSS
+**Server:** Node, Express, ejs, CSS, POSTGRES
+**Deployment:** Koyeb
 
