@@ -6,8 +6,8 @@ import { body, validationResult } from 'express-validator';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`My first Express app - listening on port ${PORT}!`));
+// const PORT = process.env.PORT || 3000;
+app.listen(process.env.PORT, () => console.log(`My first Express app - listening on port ${PORT}!`));
 // view engine setup
 app.set('view engine', 'ejs');
 // middleware for static files
