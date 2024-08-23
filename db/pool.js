@@ -6,11 +6,8 @@ const { Pool } = pkg;
 // All of the following properties should be read from environment variables
 // We're hardcoding them here for simplicity
 const pool = new Pool({
-    host: "localhost", // or wherever the db is hosted
-    user: process.env.role_name,
-    password: process.env.role_password,
-    database: process.env.database,
-    port: 5432,
+    connectionString: process.env.DATABASE_URL,
+    ssl: false // Disable SSL if the server doesn't support it
 });
 
 async function testConnection() {

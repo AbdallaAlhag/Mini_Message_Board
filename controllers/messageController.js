@@ -4,7 +4,6 @@ import { getUserMessages, insertUsername, getSingleMessages } from '../db/querie
 // Controller to handle getting the messages and rendering the home page
 async function getMessages(req, res) {
     const messages = await getUserMessages();
-    console.log(messages);
     res.render('index', {
         title: 'Mini Message Board',
         // messages: messages.reverse(),
@@ -29,9 +28,7 @@ function addNewMessage(req, res) {
 const blog_details = async (req, res) => {
     const id = req.params.id;
     const idAsNumber = parseInt(id, 10) + 1;
-    console.log('ID:', idAsNumber)
     const result = await getSingleMessages(idAsNumber);
-    console.log('result:', result);
     if (result) {
         res.render('details', { message: result, title: 'Message Details', moment });
     } else {
