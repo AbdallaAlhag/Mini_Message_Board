@@ -7,19 +7,18 @@ const { Pool } = pkg;
 // We're hardcoding them here for simplicity
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
-    ssl: false // Disable SSL if the server doesn't support it
 });
 
-// async function testConnection() {
-//     try {
-//         const client = await pool.connect();
-//         console.log('Connected to the database');
-//         client.release();
-//     } catch (error) {
-//         console.error('Error connecting to the database:', error);
-//     }
-// }
+async function testConnection() {
+    try {
+        const client = await pool.connect();
+        console.log('Connected to the database');
+        client.release();
+    } catch (error) {
+        console.error('Error connecting to the database:', error);
+    }
+}
 
-// testConnection();
+testConnection();
 
 export default pool;
