@@ -6,7 +6,7 @@ import { body, validationResult } from 'express-validator';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 app.listen(PORT,"0.0.0.0", () => console.log(`My first Express app - listening on port ${PORT}!`));
 // view engine setup
 app.set('view engine', 'ejs');
