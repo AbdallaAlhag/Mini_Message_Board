@@ -10,15 +10,17 @@
       </div>
       <div class="messageContainer">
         <ul>
-          <% messages.slice().reverse().forEach((message, index) => { %>
+          <% messages.slice().reverse().forEach((message, index) => { %> <%
+          const messageIndex = messages.length - index - 1; %>
+
           <li>
             <div class="message-content">
               <div>
                 <strong><%= message.username %>:</strong> <%= message.text %>
               </div>
               <div>
-                <small>About <%= moment(message.added).fromNow() %></small>
-                <a href="/details/<%= index %>" class="btn">Open</a>
+                <small>About <%= moment(message.created_at).fromNow() %></small>
+                <a href="/details/<%= messageIndex %>" class="btn">Open</a>
               </div>
             </div>
           </li>
