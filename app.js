@@ -7,7 +7,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => console.log(`My first Express app - listening on port ${PORT}!`));
+app.listen(PORT,"0.0.0.0", () => console.log(`My first Express app - listening on port ${PORT}!`));
 // view engine setup
 app.set('view engine', 'ejs');
 // middleware for static files
